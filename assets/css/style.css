@@ -2,10 +2,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
-
 .navbar {
   height: 100px;
   -webkit-backdrop-filter: blur(25px) saturate(200%);
@@ -13,9 +9,18 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .navbar .navbar-brand-icon {
-  color: #ecd500;
+  color: #f7ff00;
 }
 
+.discount-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  color: #000000;
+  font-size: 1.5rem;
+}
 .main-slider-item {
   position: relative;
 }
@@ -39,7 +44,7 @@ body {
 
 .company-feature-section {
   padding: 3rem 0 3rem 0;
-  background-color: rgba(244, 244, 244, 0.9);
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 .company-feature-section .company-feature {
   margin-top: 1rem;
@@ -65,26 +70,29 @@ body {
 .company-feature-section .company-feature-attributes .attribute {
   display: flex;
 }
+.company-feature-section .company-feature-attributes .attribute-title {
+  color: #000000;
+}
 .company-feature-section .company-feature-attributes .attribute-img {
+  color: #2db20c;
   background-color: #323232;
   height: 4rem;
   width: 4rem;
   border-radius: 0.5rem;
-  color: #ecd500;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
 }
 .company-feature-section .company-feature-link {
-  background-color: #ecd500;
+  background-color: #29323c;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 10px 30px;
+  padding: 14px 30px;
   font-weight: 500;
   text-decoration: none;
-  color: #000000;
+  color: #05e31b;
   margin-top: 25px;
 }

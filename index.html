@@ -21,6 +21,8 @@
     <!-- <div class="alert alert-danger m-0 p-1 rounded-0 ">
         Bu web sitesi ve içindeki bilgiler gerçek değildir. Ödev amaçlı yapılmıştır.
     </div> -->
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#">
@@ -63,6 +65,7 @@
         </div>
     </nav>
 
+    <!-- Main Slider -->
     <section>
         <div class="swiper mainSlider">
             <div class="swiper-wrapper">
@@ -79,7 +82,21 @@
             </div>
         </div>
     </section>
-    <section class="company-feature-section">
+
+    <!-- Counter of end of discounts -->
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <div class="discount-counter mt-5 py-4  ">
+                    <p class="text-bg-warning  p-1 px-2  rounded ">Acele edin! Bahar indirimlerinin bitmesine son</p>
+                    <p class="discount-counter-content text-danger " id="discountCounter"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="company-feature-section mt-5   ">
         <div class="container ">
             <div class="text-center">
                 <h2 class="">Taşınabilir evlerin potansiyelini keşfedin!</h2>
@@ -128,7 +145,7 @@
                                             İstediğiniz Şekilde
                                         </div>
                                         <div class="attribute-text">
-                                            Hayallerinizdeki gibi yerleştirme yapıyoruz.
+                                            Hayallerinizdeki gibi.
                                         </div>
                                     </div>
                                 </div>
@@ -147,8 +164,82 @@
             </div>
 
 
+
         </div>
+        </div>
+
+
     </section>
+
+    <section class="company-feature-section mt-5  ">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="">Kalite ile ortak noktada!</h2>
+            </div>
+            <div class="company-feature">
+
+                <div class="row">
+                    <div class="col-12 col-md-6 p-5">
+                        <div class="company-feature-end rounded-3">
+                            <img src="assets/img/company-features/3.jpg" class="company-feature-end-img" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 p-5 d-flex align-items-center ">
+                        <div class="company-feature-start">
+                            <h3 class="company-feature-title">Kendinizi Güvende Hissedin!</h3>
+                            <p class="mt-3 text text-opacity-75 ">Taksit imkanı ile
+                                bütçenize uygun taksit imkanlarından yararlanın.</p>
+                            <div class="company-feature-attributes">
+                                <div class="attribute">
+                                    <div class="attribute-img">
+                                        <i class="bi bi-calendar-check"></i>
+                                    </div>
+                                    <div class="d-flex  justify-content-center  flex-column ps-4   ">
+                                        <div class="attribute-title fs-4 fw-bolder ">
+                                            5 yıl Garanti!
+                                        </div>
+                                        <div class="attribute-text">
+                                            Eviniz ile birlikte 5 yıl garantiye sahip olun.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attribute">
+                                    <div class="attribute-img">
+                                        <i class="bi bi-check-circle"></i>
+                                    </div>
+                                    <div class="d-flex  justify-content-center  flex-column ps-4   ">
+                                        <div class="attribute-title fs-4 fw-bolder ">
+                                            Taksit Fırsatı!
+                                        </div>
+                                        <div class="attribute-text">
+                                            Bütçenize uygun taksit imkanlarından yararlanın.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attribute">
+                                    <div class="attribute-img">
+                                        <i class="bi bi-bag-check-fill"></i>
+                                    </div>
+                                    <div class="d-flex  justify-content-center  flex-column ps-4   ">
+                                        <div class="attribute-title fs-4 fw-bolder ">
+                                            İstediğiniz Şekilde
+                                        </div>
+                                        <div class="attribute-text">
+                                            Hayallerinizdeki gibi.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="company-feature-link">
+                                Ürünleri İncele
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -156,6 +247,27 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mainSlider", {});
+
+        var endDate = new Date("jun 15, 2024 23:59").getTime();
+
+        var x = setInterval(() => {
+            var nowDate = new Date().getTime();
+
+            var range = endDate - nowDate;
+
+            var days = Math.floor(range / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((range % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((range % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((range % (1000 * 60)) / 1000);
+
+            document.getElementById("discountCounter").innerHTML = days + " Gün " + hours + " Saat " + minutes + " Dakika " + seconds + " Saniye ";
+
+            if (range <= 0) {
+                clearInterval(x);
+                document.getElementById("discountCounter").innerHTML = "İndirim Bitti!"
+
+            }
+        }, 1000);
     </script>
 </body>
 
