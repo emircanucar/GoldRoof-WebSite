@@ -61,14 +61,7 @@
   }
 }
 
-.company-feature-section-wrapper {
-  background-image: url("../img/background/1.jpg");
-  background-size: cover;
-  background-position: center;
-}
 .company-feature-section {
-  background: rgb(236, 236, 236);
-  backdrop-filter: blur(10px);
   .company-feature {
     margin-top: 1rem;
     &-end {
@@ -132,8 +125,6 @@
 }
 
 .country-map {
-  background: rgb(236, 236, 236);
-
   &-regions-wrapper {
     overflow: auto;
   }
