@@ -2,14 +2,48 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --navbar-height: 80px;
+}
+
 .navbar {
-  height: 100px;
+  height: var(--navbar-height);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+          backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.navbar-brand-icon {
+  color: #f7ff00;
+}
+.navbar-collapse.show {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 10px 20px;
   -webkit-backdrop-filter: blur(25px) saturate(200%);
           backdrop-filter: blur(25px) saturate(200%);
   background-color: rgba(0, 0, 0, 0.8);
 }
-.navbar .navbar-brand-icon {
-  color: #f7ff00;
+.navbar-collapse.collapsing {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 10px 20px;
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+          backdrop-filter: blur(25px) saturate(200%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-collapse .dropdown-menu.show {
+  background-color: transparent;
+}
+.navbar-collapse .dropdown-menu.show a {
+  color: #ffffff;
+}
+.navbar-collapse .dropdown-menu.show a:hover {
+  background-color: #4b4b4b;
 }
 
 .discount-counter-wrapper {
@@ -38,6 +72,22 @@
   -webkit-backdrop-filter: blur(13.9px);
   text-decoration: none;
   color: #000000;
+}
+
+.mainSlider {
+  overflow: visible !important;
+}
+.mainSlider::before {
+  content: "";
+  width: 100%;
+  height: var(--navbar-height);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background-color: #000000;
+  z-index: 10;
 }
 
 .main-slider-item {

@@ -2,12 +2,47 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --navbar-height: 80px;
+}
 .navbar {
-  height: 100px;
+  height: var(--navbar-height);
   backdrop-filter: blur(25px) saturate(200%);
   background-color: rgba(0, 0, 0, 0.8);
-  .navbar-brand-icon {
+  position: relative;
+  &-brand-icon {
     color: #f7ff00;
+  }
+
+  &-collapse {
+    &.show {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      padding: 10px 20px;
+      backdrop-filter: blur(25px) saturate(200%);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    &.collapsing {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      padding: 10px 20px;
+      backdrop-filter: blur(25px) saturate(200%);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dropdown-menu.show {
+      background-color: transparent;
+      a {
+        color: #ffffff;
+        &:hover {
+          background-color: #4b4b4b;
+        }
+      }
+    }
   }
 }
 
@@ -40,7 +75,21 @@
     }
   }
 }
-
+.mainSlider {
+  overflow: visible !important;
+  &::before {
+    content: "";
+    width: 100%;
+    height: var(--navbar-height);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: #000000;
+    z-index: 10;
+  }
+}
 .main-slider-item {
   position: relative;
   &-img {
