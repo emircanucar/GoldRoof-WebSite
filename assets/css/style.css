@@ -19,8 +19,8 @@
   flex-direction: column;
   background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   color: #000000;
-  font-size: 1.5rem;
 }
+
 .main-slider-item {
   position: relative;
 }
@@ -44,7 +44,7 @@
 
 .company-feature-section {
   padding: 3rem 0 3rem 0;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-color: #fcfcfc;
 }
 .company-feature-section .company-feature {
   margin-top: 1rem;
@@ -74,7 +74,7 @@
   color: #000000;
 }
 .company-feature-section .company-feature-attributes .attribute-img {
-  color: #2db20c;
+  color: #f6ff00;
   background-color: #323232;
   height: 4rem;
   width: 4rem;
@@ -85,14 +85,18 @@
   font-size: 1.5rem;
 }
 .company-feature-section .company-feature-link {
-  background-color: #29323c;
+  background-color: #f6ff00;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 14px 30px;
+  padding: 16px 30px;
   font-weight: 500;
   text-decoration: none;
-  color: #05e31b;
+  color: #323232;
+  font-weight: 500;
   margin-top: 25px;
+}
+.company-feature-section .company-feature-link:hover {
+  background-color: rgba(246, 255, 0, 0.687);
 }
