@@ -100,3 +100,45 @@
 .company-feature-section .company-feature-link:hover {
   background-color: rgba(246, 255, 0, 0.687);
 }
+
+.page-header {
+  height: 400px;
+  width: 100%;
+  background-image: url("../img/page-header/1.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+  position: relative;
+}
+.page-header-content {
+  z-index: 1;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .page-header-content {
+    transform: translate(0, -50%);
+    left: 10%;
+  }
+}
+.page-header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.about-us-title {
+  text-align: center;
+  margin-top: 6rem;
+}
+.about-us-text {
+  text-align: justify;
+}
