@@ -1,6 +1,5 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  flex-shrink: 0;
 }
 
 .navbar {
@@ -102,6 +101,7 @@
   color: #000000;
 }
 .company-feature-section .company-feature-attributes .attribute-img {
+  flex-shrink: 0;
   color: #f6ff00;
   background-color: #323232;
   height: 4rem;
@@ -131,6 +131,18 @@
 
 .country-map {
   background: rgb(236, 236, 236);
+}
+.country-map-regions-wrapper {
+  overflow: auto;
+}
+.country-map-regions {
+  overflow: auto;
+  min-height: 400px;
+}
+@media (min-width: 768px) {
+  .country-map-regions {
+    max-width: 100%;
+  }
 }
 .country-map .region {
   fill: #fffef5;

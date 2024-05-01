@@ -1,6 +1,5 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  flex-shrink: 0;
 }
 
 .navbar {
@@ -61,6 +60,7 @@
     opacity: 40%;
   }
 }
+
 .company-feature-section-wrapper {
   background-image: url("../img/background/1.jpg");
   background-size: cover;
@@ -98,6 +98,7 @@
           color: #000000;
         }
         &-img {
+          flex-shrink: 0;
           color: #f6ff00;
           background-color: #323232;
           height: 4rem;
@@ -132,6 +133,19 @@
 
 .country-map {
   background: rgb(236, 236, 236);
+
+  &-regions-wrapper {
+    overflow: auto;
+  }
+
+  &-regions {
+    overflow: auto;
+
+    min-height: 400px;
+    @media (min-width: 768px) {
+      max-width: 100%;
+    }
+  }
 
   .region {
     fill: #fffef5;
