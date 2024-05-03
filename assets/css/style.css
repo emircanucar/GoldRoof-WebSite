@@ -79,14 +79,14 @@
   background-position: center;
 }
 .discount-counter-wrapper .discount-counter {
+  padding: 120px 10px;
   background: rgba(0, 0, 0, 0.51);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(18.1px);
-          backdrop-filter: blur(18.1px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   flex-direction: column;
   color: #000000;
 }
