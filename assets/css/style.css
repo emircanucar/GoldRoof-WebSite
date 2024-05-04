@@ -122,6 +122,35 @@
   opacity: 40%;
 }
 
+.sales-counter {
+  position: relative;
+}
+.sales-counter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20%;
+  top: -30%;
+  width: 60px;
+  height: 60px;
+  -webkit-clip-path: polygon(evenodd, 0% 0%, 100% 0%, 0% 100%, 10% 90%, 10% 10%, 90% 10%, 10% 90%, 0% 100%);
+          clip-path: polygon(evenodd, 0% 0%, 100% 0%, 0% 100%, 10% 90%, 10% 10%, 90% 10%, 10% 90%, 0% 100%);
+  background-color: #f6ff00;
+}
+.sales-counter::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 20%;
+  bottom: -30%;
+  width: 60px;
+  height: 60px;
+  -webkit-clip-path: polygon(evenodd, 0% 0%, 100% 0%, 0% 100%, 10% 90%, 10% 10%, 90% 10%, 10% 90%, 0% 100%);
+          clip-path: polygon(evenodd, 0% 0%, 100% 0%, 0% 100%, 10% 90%, 10% 10%, 90% 10%, 10% 90%, 0% 100%);
+  transform: rotate(180deg);
+  background-color: #f6ff00;
+}
+
 .company-feature-section .company-feature {
   margin-top: 1rem;
 }
@@ -199,10 +228,10 @@
   stroke-width: 1;
 }
 .country-map-regions path:hover {
-  fill: #b11200;
+  fill: #4d4d4d;
 }
 .country-map-regions .current {
-  fill: #006394;
+  fill: #f6ff00;
   position: relative;
 }
 

@@ -124,6 +124,52 @@
   }
 }
 
+.sales-counter {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20%;
+    top: -30%;
+    width: 60px;
+    height: 60px;
+    clip-path: polygon(
+      evenodd,
+      0% 0%,
+      100% 0%,
+      0% 100%,
+      10% 90%,
+      10% 10%,
+      90% 10%,
+      10% 90%,
+      0% 100%
+    );
+    background-color: #f6ff00;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20%;
+    bottom: -30%;
+    width: 60px;
+    height: 60px;
+    clip-path: polygon(
+      evenodd,
+      0% 0%,
+      100% 0%,
+      0% 100%,
+      10% 90%,
+      10% 10%,
+      90% 10%,
+      10% 90%,
+      0% 100%
+    );
+    transform: rotate(180deg);
+    background-color: #f6ff00;
+  }
+}
 .company-feature-section {
   .company-feature {
     margin-top: 1rem;
@@ -206,11 +252,11 @@
       clip-rule: evenodd;
       stroke-width: 1;
       &:hover {
-        fill: #b11200;
+        fill: #4d4d4d;
       }
     }
     .current {
-      fill: #006394;
+      fill: #f6ff00;
       position: relative;
     }
   }
