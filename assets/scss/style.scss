@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yellowtail&display=swap");
 * {
   font-family: "Quicksand", Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 :root {
@@ -11,17 +12,23 @@
   height: var(--navbar-height);
   backdrop-filter: blur(25px) saturate(200%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9));
+  position: relative;
+  font-size: 18px;
 
   &-brand {
     position: relative;
+    display: flex;
+    align-items: center;
+    transform: translatey(-10%);
     &-name {
+      margin-left: 10px;
       &::before {
-        content: "- Since 1974";
+        content: "Since 1974";
         display: block;
         width: fit-content;
         position: absolute;
-        right: -60px;
-        top: 20px;
+        right: 2px;
+        bottom: -5px;
         z-index: 10;
         font-size: 14px;
         font-family: "yellowtail";
@@ -33,15 +40,39 @@
   }
 
   &-collapse {
-    .navbar-nav,
-    .nav-item,
-    .nav-link {
-      display: flex;
-      align-items: center;
-      height: 100%;
+    &.show {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      padding: 0 20px;
+
+      backdrop-filter: blur(25px) saturate(200%);
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgb(0, 0, 0, 0.9)
+      );
+    }
+    &.collapsing {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+
+      padding: 0 20px;
+
+      backdrop-filter: blur(25px) saturate(200%);
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgb(0, 0, 0, 0.9)
+      );
     }
 
     .nav-link {
+      padding: 15px 5px;
+
       position: relative;
       &::before {
         content: "";
@@ -61,37 +92,79 @@
         }
       }
     }
-
-    &.show {
-      position: absolute;
-      left: 0;
-      top: 100%;
-      width: 100%;
-      padding: 10px 20px;
-      backdrop-filter: blur(25px) saturate(200%);
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    &.collapsing {
-      position: absolute;
-      left: 0;
-      top: 100%;
-      width: 100%;
-      padding: 10px 20px;
-      backdrop-filter: blur(25px) saturate(200%);
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .dropdown-menu.show {
-      backdrop-filter: blur(25px) saturate(200%);
-      background-color: rgba(0, 0, 0, 0.8);
-      a {
-        color: #ffffff;
-        &:hover {
-          background-color: #252525;
-        }
-      }
-    }
   }
+
+  // &-collapse {
+  //   .navbar-nav,
+  //   .nav-item,
+  //   .nav-link {
+  //     display: flex;
+  //     align-items: center;
+  //     height: 100%;
+  //   }
+
+  //   .nav-link {
+  //     position: relative;
+  //     &::before {
+  //       content: "";
+  //       display: block;
+  //       width: 100%;
+  //       height: 2px;
+  //       background-color: #f7ff00;
+  //       position: absolute;
+  //       left: 0;
+  //       bottom: 0;
+  //       z-index: 10;
+  //       opacity: 0;
+  //     }
+  //     &:hover {
+  //       &::before {
+  //         opacity: 1;
+  //       }
+  //     }
+  //   }
+
+  //   &.show {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 100%;
+  //     width: 100%;
+  //     padding: 10px 20px;
+  //     backdrop-filter: blur(25px) saturate(200%);
+  //     background-color: rgba(0, 0, 0, 0.8);
+
+  //     & li,
+  //     a {
+  //       width: 100%;
+  //     }
+  //   }
+  //   &.collapsing {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 100%;
+  //     width: 100%;
+  //     padding: 10px 20px;
+  //     backdrop-filter: blur(25px) saturate(200%);
+  //     background-color: rgba(0, 0, 0, 0.8);
+  //     transition: all ease-in-out 300ms;
+
+  //     & li,
+  //     a {
+  //       width: 100%;
+  //     }
+  //   }
+
+  //   .dropdown-menu.show {
+  //     backdrop-filter: blur(25px) saturate(200%);
+  //     background-color: rgba(0, 0, 0, 0.8);
+  //     a {
+  //       color: #ffffff;
+  //       &:hover {
+  //         background-color: #252525;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .top-bar {

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yellowtail&display=swap");
 * {
   font-family: "Quicksand", Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 :root {
@@ -13,18 +14,26 @@
   -webkit-backdrop-filter: blur(25px) saturate(200%);
           backdrop-filter: blur(25px) saturate(200%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  position: relative;
+  font-size: 18px;
 }
 .navbar-brand {
   position: relative;
+  display: flex;
+  align-items: center;
+  transform: translatey(-10%);
+}
+.navbar-brand-name {
+  margin-left: 10px;
 }
 .navbar-brand-name::before {
-  content: "- Since 1974";
+  content: "Since 1974";
   display: block;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  right: -60px;
-  top: 20px;
+  right: 2px;
+  bottom: -5px;
   z-index: 10;
   font-size: 14px;
   font-family: "yellowtail";
@@ -32,14 +41,28 @@
 .navbar-brand-icon {
   color: #f7ff00;
 }
-.navbar-collapse .navbar-nav,
-.navbar-collapse .nav-item,
-.navbar-collapse .nav-link {
-  display: flex;
-  align-items: center;
-  height: 100%;
+.navbar-collapse.show {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+          backdrop-filter: blur(25px) saturate(200%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+}
+.navbar-collapse.collapsing {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 0 20px;
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+          backdrop-filter: blur(25px) saturate(200%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
 }
 .navbar-collapse .nav-link {
+  padding: 15px 5px;
   position: relative;
 }
 .navbar-collapse .nav-link::before {
@@ -56,37 +79,6 @@
 }
 .navbar-collapse .nav-link:hover::before {
   opacity: 1;
-}
-.navbar-collapse.show {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  padding: 10px 20px;
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-          backdrop-filter: blur(25px) saturate(200%);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.navbar-collapse.collapsing {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  padding: 10px 20px;
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-          backdrop-filter: blur(25px) saturate(200%);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.navbar-collapse .dropdown-menu.show {
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
-          backdrop-filter: blur(25px) saturate(200%);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.navbar-collapse .dropdown-menu.show a {
-  color: #ffffff;
-}
-.navbar-collapse .dropdown-menu.show a:hover {
-  background-color: #252525;
 }
 
 .top-bar {
