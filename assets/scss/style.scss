@@ -1,18 +1,35 @@
-@import url("http@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');s://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yellowtail&display=swap");
 * {
-  font-family: "quicksand", Helvetica, sans-serif;
+  font-family: "Quicksand", Helvetica, sans-serif;
 }
 
 :root {
   --navbar-height: 6.25rem;
+  --main-slider-height: 80dvh;
 }
 .navbar {
   height: var(--navbar-height);
   backdrop-filter: blur(25px) saturate(200%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgb(0, 0, 0, 0.9));
 
-  &-brand-icon {
-    color: #f7ff00;
+  &-brand {
+    position: relative;
+    &-name {
+      &::before {
+        content: "- Since 1974";
+        display: block;
+        width: fit-content;
+        position: absolute;
+        right: -60px;
+        top: 20px;
+        z-index: 10;
+        font-size: 14px;
+        font-family: "yellowtail";
+      }
+    }
+    &-icon {
+      color: #f7ff00;
+    }
   }
 
   &-collapse {
@@ -138,23 +155,82 @@
   }
 }
 
-.main-slider-item {
+.main-slider-wrapper {
+  .swiper-slide {
+    overflow: hidden;
+    .main-slider-content {
+      transform: translate(-150%);
+    }
+    &-active {
+      .main-slider-content {
+        transform: translate(0);
+      }
+    }
+  }
+}
+.main-slider {
   position: relative;
+  height: var(--main-slider-height);
+  &-content-wrapper {
+    height: var(--main-slider-height);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+  }
+  &-content {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 32px 16px;
+    color: #ffffff;
+    max-width: 400px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 500;
+    transition: all ease-in-out 500ms;
+    &-title {
+      font-size: 2.5rem;
+    }
+    &-subtitle {
+      font-size: 2rem;
+    }
+    &-text {
+      margin-top: 10px;
+    }
+    &-btn {
+      text-decoration: none;
+      background-color: #f7ff00;
+      color: #000000;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      height: 40px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  }
   &-img {
     width: 100%;
-    height: 40rem;
+    height: 100%;
     object-fit: cover;
+    z-index: 0;
   }
   &::after {
     content: "";
-    background-color: rgb(0, 1, 52);
+    background-color: rgb(0, 0, 0);
     position: absolute;
     inset: 0;
     display: block;
     width: 100%;
     height: 100%;
-    z-index: 23;
-    opacity: 40%;
+    z-index: 1;
+    opacity: 30%;
   }
 }
 
@@ -204,6 +280,7 @@
     background-color: #f6ff00;
   }
 }
+
 .company-feature-section {
   .company-feature {
     margin-top: 1rem;
