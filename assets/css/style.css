@@ -11,7 +11,6 @@
   -webkit-backdrop-filter: blur(25px) saturate(200%);
           backdrop-filter: blur(25px) saturate(200%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
-  position: relative;
 }
 .navbar-brand-icon {
   color: #f7ff00;
@@ -71,6 +70,38 @@
 }
 .navbar-collapse .dropdown-menu.show a:hover {
   background-color: #252525;
+}
+
+.top-bar {
+  height: 60px;
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+          backdrop-filter: blur(25px) saturate(200%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  border-bottom: rgba(246, 255, 0, 0.1) solid 1px;
+}
+.top-bar-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-bar-social-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.top-bar-icon-wrapper {
+  background-color: rgb(201, 201, 201);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  border-radius: 999px;
+}
+.top-bar-icon-wrapper i {
+  display: flex;
 }
 
 .discount-counter-wrapper {
