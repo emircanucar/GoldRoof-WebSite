@@ -251,8 +251,8 @@
   }
 }
 .country-map-regions path {
-  fill: #dfdfdf;
-  stroke: #00354f;
+  fill: #d4d4d4;
+  stroke: #696969;
   stroke-linejoin: round;
   fill-rule: evenodd;
   clip-rule: evenodd;
