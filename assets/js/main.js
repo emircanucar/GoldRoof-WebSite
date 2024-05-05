@@ -1,4 +1,27 @@
 var swiper = new Swiper(".mainSlider", {});
+
+var swiper = new Swiper(".customerComment", {
+  slidesPerView: 1.05,
+  spaceBetween: 0,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".comments-nav-next",
+    prevEl: ".comments-nav-prev",
+  },
+
+  breakpoints: {
+    576: {
+      slidesPerView: 1.5,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
+
 var swiper = new Swiper(".referenceSlider", {
   slidesPerView: 1.2,
   spaceBetween: 10,
@@ -26,6 +49,7 @@ var swiper = new Swiper(".referenceSlider", {
     },
   },
 });
+
 var endDate = new Date("jun 15, 2024 23:59").getTime();
 
 var x = setInterval(() => {
