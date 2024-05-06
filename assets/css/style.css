@@ -488,3 +488,22 @@
 .customer-comments-wrapper .comment-card-footer i.active {
   color: #c29200;
 }
+
+.footer-bg {
+  position: relative;
+  height: 300px;
+  background-image: url("../img/background/2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.footer-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
