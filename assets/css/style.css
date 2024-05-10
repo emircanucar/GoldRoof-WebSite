@@ -5,7 +5,7 @@
 }
 
 :root {
-  --navbar-height: 6.25rem;
+  --navbar-height-md: 6.25rem;
   --main-slider-height: 80dvh;
   --main-yellow: #f6ff00;
 }
@@ -37,7 +37,6 @@
 }
 
 .navbar {
-  height: var(--navbar-height);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
           backdrop-filter: blur(25px) saturate(200%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
@@ -46,6 +45,11 @@
   position: sticky;
   top: 0;
   z-index: 20;
+}
+@media (min-width: 768px) {
+  .navbar {
+    height: var(--navbar-height-md);
+  }
 }
 .navbar-brand {
   position: relative;
@@ -698,4 +702,29 @@
 }
 .products-section .product-card.xxl-model {
   height: 620px;
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form input[type=number],
+.contact-form input[type=tel],
+.contact-form input[type=submit],
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #696969;
+  outline: 0;
+}
+.contact-form input[type=submit] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: var(--main-yellow);
+  border: 0;
+}
+.contact-form label {
+  margin-top: 20px;
 }
