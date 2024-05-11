@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Yellowtail&display=swap");
 * {
   font-family: "Quicksand", Helvetica, sans-serif;
@@ -156,8 +157,6 @@
   padding: 120px 10px;
   background: rgba(0, 0, 0, 0.51);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -727,4 +726,203 @@
 }
 .contact-form label {
   margin-top: 20px;
+}
+
+.product-gallery-wrapper {
+  position: relative;
+}
+.product-gallery-wrapper::before {
+  content: "Temsili Resimler. Yapay Zeka İle Oluşturuldu.";
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  top: -34px;
+  font-size: 10px;
+}
+.product-gallery-wrapper .productGallery {
+  width: 100%;
+  max-height: 400px;
+  aspect-ratio: 1/1;
+}
+.product-gallery-wrapper .productGallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.product-gallery-wrapper .slider-button-next,
+.product-gallery-wrapper .slider-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  z-index: 10;
+  color: #1f1f1f;
+  font-size: 36px;
+}
+.product-gallery-wrapper .slider-button-next {
+  right: -40px;
+}
+.product-gallery-wrapper .slider-button-prev {
+  left: -40px;
+}
+.product-gallery-wrapper .gallery-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: -35px;
+}
+
+.product-gallery-thumb-wrapper {
+  position: relative;
+}
+.product-gallery-thumb-wrapper .productGalleryThumb {
+  width: 100%;
+  max-height: 100px;
+  aspect-ratio: 1/1;
+}
+.product-gallery-thumb-wrapper .productGalleryThumb img {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+.product-gallery-thumb-wrapper .productGalleryThumb img:hover {
+  opacity: 1;
+}
+.product-gallery-thumb-wrapper .productGalleryThumb .swiper-slide-thumb-active img {
+  opacity: 1;
+}
+
+.product-features {
+  margin-top: 10px;
+  width: 100%;
+}
+.product-features ul {
+  padding-left: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-features ul li {
+  font-weight: 600;
+  margin-top: 10px;
+  position: relative;
+  padding-right: 40px;
+}
+.product-features ul li.checked::after {
+  content: "";
+  background-image: url("../img/icon/check.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+.product-features ul li.unchecked::after {
+  content: "";
+  background-image: url("../img/icon/x.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.product-features ul li.notr::after {
+  content: "";
+  background-image: url("../img/icon/line.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 20px;
+  height: 3px;
+}
+
+.product-review {
+  display: flex;
+  flex-direction: column;
+}
+.product-review-price {
+  font-weight: 600;
+  font-size: 25px;
+  color: rgb(0, 15, 99);
+}
+.product-review-buy {
+  background-color: var(--main-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000000;
+  text-decoration: none;
+  padding: 6px 30px;
+}
+.product-review .choose-color {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.product-review .choose-color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  background-color: #000000;
+  border: 1px solid #8b8b8b;
+  cursor: pointer;
+}
+.product-review .choose-color-box:active {
+  border: 3px solid #000000;
+}
+.product-review .choose-color-box:nth-child(1) {
+  background-color: #ffffff;
+}
+.product-review .choose-color-box:nth-child(2) {
+  background-color: #e2e2e2;
+}
+.product-review .choose-color-box:nth-child(3) {
+  background-color: #bebebe;
+}
+.product-review .choose-color-box:nth-child(4) {
+  background-color: #cfcfcf;
+}
+.product-review .choose-color-box:nth-child(5) {
+  background-color: #bababa;
+}
+.product-review .choose-color-box:nth-child(6) {
+  background-color: #c1c1c1;
+}
+.product-review .choose-color-box:nth-child(7) {
+  background-color: #cbcbcb;
+}
+.product-review .choose-color-box:nth-child(8) {
+  background-color: #9c9c9c;
 }

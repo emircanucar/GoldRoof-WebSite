@@ -166,7 +166,6 @@
     padding: 120px 10px;
     background: rgba(0, 0, 0, 0.51);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -804,5 +803,218 @@
 
   label {
     margin-top: 20px;
+  }
+}
+
+.product-gallery-wrapper {
+  position: relative;
+
+  &::before {
+    content: "Temsili Resimler. Yapay Zeka İle Oluşturuldu.";
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    top: -34px;
+    font-size: 10px;
+  }
+  .productGallery {
+    width: 100%;
+    max-height: 400px;
+    aspect-ratio: 1/1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+
+  .slider-button-next,
+  .slider-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: fit-content;
+    padding: 0;
+    z-index: 10;
+    color: #1f1f1f;
+    font-size: 36px;
+  }
+  .slider-button-next {
+    right: -40px;
+  }
+  .slider-button-prev {
+    left: -40px;
+  }
+  .gallery-pagination {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    width: fit-content;
+
+    bottom: -35px;
+  }
+}
+.product-gallery-thumb-wrapper {
+  position: relative;
+  .productGalleryThumb {
+    width: 100%;
+    max-height: 100px;
+    aspect-ratio: 1/1;
+
+    img {
+      aspect-ratio: 1/1;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .swiper-slide-thumb-active {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.product {
+  &-features {
+    ul {
+      padding-left: 10px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        font-weight: 600;
+        margin-top: 10px;
+        position: relative;
+        padding-right: 40px;
+        &.checked {
+          &::after {
+            content: "";
+            background-image: url("../img/icon/check.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+          }
+        }
+        &.unchecked {
+          &::after {
+            content: "";
+            background-image: url("../img/icon/x.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+        &.notr {
+          &::after {
+            content: "";
+            background-image: url("../img/icon/line.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            width: 20px;
+            height: 3px;
+          }
+        }
+      }
+    }
+    margin-top: 10px;
+
+    width: 100%;
+  }
+}
+
+.product-review {
+  display: flex;
+  flex-direction: column;
+
+  &-price {
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(0, 15, 99);
+  }
+  &-buy {
+    background-color: var(--main-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+    padding: 6px 30px;
+  }
+  .choose-color {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    &-box {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      background-color: #000000;
+      border: 1px solid #8b8b8b;
+      cursor: pointer;
+      &:active {
+        border: 3px solid #000000;
+      }
+
+      &:nth-child(1) {
+        background-color: #ffffff;
+      }
+      &:nth-child(2) {
+        background-color: #e2e2e2;
+      }
+      &:nth-child(3) {
+        background-color: #bebebe;
+      }
+      &:nth-child(4) {
+        background-color: #cfcfcf;
+      }
+      &:nth-child(5) {
+        background-color: #bababa;
+      }
+      &:nth-child(6) {
+        background-color: #c1c1c1;
+      }
+      &:nth-child(7) {
+        background-color: #cbcbcb;
+      }
+      &:nth-child(8) {
+        background-color: #9c9c9c;
+      }
+    }
   }
 }
