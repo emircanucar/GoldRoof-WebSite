@@ -459,11 +459,7 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-
-  &-img {
-    width: 100%;
-    object-fit: cover;
-  }
+  background-color: #323232;
 
   &-brand {
     position: absolute;
@@ -473,8 +469,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px) saturate(200%);
 
     img {
       object-fit: cover;

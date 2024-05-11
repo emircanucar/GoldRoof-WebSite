@@ -411,11 +411,7 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-}
-.reference-card-img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-color: #323232;
 }
 .reference-card-brand {
   position: absolute;
@@ -425,9 +421,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(10px) saturate(200%);
-          backdrop-filter: blur(10px) saturate(200%);
 }
 .reference-card-brand img {
   -o-object-fit: cover;
