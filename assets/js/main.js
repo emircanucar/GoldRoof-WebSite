@@ -27,6 +27,26 @@ var swiper = new Swiper(".referenceSlider", {
   spaceBetween: 10,
 
   breakpoints: {
+    300: {
+      slidesPerView: 1.4,
+      spaceBetween: 10,
+    },
+    330: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    400: {
+      slidesPerView: 1.8,
+      spaceBetween: 10,
+    },
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    500: {
+      slidesPerView: 2.2,
+      spaceBetween: 10,
+    },
     576: {
       slidesPerView: 2.5,
       spaceBetween: 20,
@@ -35,12 +55,12 @@ var swiper = new Swiper(".referenceSlider", {
       slidesPerView: 3.5,
       spaceBetween: 20,
     },
-    1024: {
-      slidesPerView: 4.5,
+    992: {
+      slidesPerView: 4,
       spaceBetween: 20,
     },
-    1280: {
-      slidesPerView: 5.5,
+    1200: {
+      slidesPerView: 5,
       spaceBetween: 20,
     },
     1536: {
