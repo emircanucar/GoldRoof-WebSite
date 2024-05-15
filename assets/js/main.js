@@ -70,7 +70,7 @@ var swiper = new Swiper(".referenceSlider", {
   },
 });
 
-var endDate = new Date("jun 15, 2024 23:59").getTime();
+var endDate = new Date("may 20, 2024 23:59").getTime();
 
 var x = setInterval(() => {
   var nowDate = new Date().getTime();
@@ -97,3 +97,10 @@ var x = setInterval(() => {
     document.getElementById("discountCounter").innerHTML = "İndirim Bitti!";
   }
 }, 1000);
+
+var chatBox = document.querySelector(".chat-box-container");
+var chatBoxBtn = document.querySelector(".chat-box-button");
+function toggleShow() {
+  chatBox.classList.toggle("show");
+}
+chatBoxBtn.addEventListener("click", toggleShow);
